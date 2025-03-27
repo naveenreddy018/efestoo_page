@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+/* Main container */
+.signUpForUserStudent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  gap: 15px;
+}
+
+/* User form card */
+.userFormCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); */
+}
+
+/* Create an Account */
+.createAnAccountParent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.createAnAccount {
+  font-weight: 400 !important;
+  font-size: 1.5rem;
+}
+
+/* Already have an account */
+.alreadyHaveAnContainer {
+  font-size: 0.8rem;
+  padding: 0.4rem 0;
+  text-decoration: none;
+}
+
+/* Forgot password */
+.forgotPassword {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+/* Get Started Button */
+.getStartedButton {
+  border-radius: 25px !important;
+  background-color: #00B47E !important;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: none;
+  text-align: center;
+}
+
+.getStartedButton:hover {
+  background-color: #008F65;
+}
+
+/* Input Fields */
+.gridContainer .MuiTextField-root {
+  font-size: 0.8rem;
+  padding: 3px 0;
+}
+
+/* Social login */
+.orDivider,
+.signInWith {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.socialLogin {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.navLinks {
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.3);
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+/* Terms and Conditions */
+.termsAndConditions {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.8rem;
+}
+
+/* Left Side: Efestoo Card */
+.groupParent {
+  background-color: #00B47E;
+  color: #FFFFFF;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+
+
+  border-radius: 30px;
+
+  clip-path: polygon(0% 0%,
+      calc(100% - 60px) 0%, calc(100% - 60px) 60px,
+      100% 60px, 100% 100%,
+      0% 100%);
+}
+
+
+
+/* Card Header */
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 1.5rem;
+}
+
+.welcomeTo {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.efestoocom {
+  font-weight: 400 !important;
+
+}
+
+.findExcitingCollege {
+  text-align: left;
+
+}
+
+/* Efestoo.com Title */
+.efestoocom {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.getStartedBtn {
+  display: none !important;
+  font-size: 1.8rem !important;
+  background-color: #FFFFFF !important;
+  color:#00B47E !important;
+}
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: #ffffff;
+  color: black;
+  border-radius: 20px;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: flex-start;
+  position: relative;
+  clip-path: polygon(0% 0%, calc(100% - 6vw) 0%, calc(100% - 6vw) 5vw, 100% 5vw, 100% 100%, 0% 100%);
+}
+
+/* Circle Positioned at the Cut-Out Part */
+.roundCircle {
+  width: 55px;
+  height: 55px;
+  background-color:white !important;
+  border-radius: 50%;
+  position: absolute;
+  top: 74%;
+  left: 80%;
+  z-index: 1000;
+  /* transform: translate(50%, -50%); */
+}
+
+/* Ensures text is properly aligned */
+.lookingForAn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.findTheBest {
+  font-size: 0.8rem;
+}
+
+/* Layout for text and image */
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 1024px) {
+  .userFormCard {
+    max-width: 80% !important;
+    padding: 10px;
+  }
+
+  .gridContainer .MuiTextField-root {
+    font-size: 0.75rem;
+  }
+
+  .signUpForUserStudent {
+    flex-wrap: nowrap;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .cardFooter {
+    clip-path: polygon(0% 0%,
+        calc(100% - 6vw) 0%, calc(100% - 6vw) 6vw,
+        100% 6vw, 100% 100%,
+        0% 100%);
+  }
+
+  .roundCircle {
+    width: 30px;
+    height: 30px;
+    top: 73.5% !important;
+    left: 81% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .signUpForUserStudent {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .cardFooter {
+    padding: 0.8rem;
+    clip-path: polygon(0% 0%,
+        calc(100% - 10vw) 0%, calc(100% - 10vw) 7vw,
+        100% 7vw, 100% 100%,
+        0% 100%);
+  }
+
+  .userFormCard {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .gridContainer .MuiTextField-root {
+    font-size: 0.75rem;
+  }
+
+  .groupParent {
+    max-width: 95%;
+    height: auto;
+  }
+
+  .getStartedButton {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .navLinks {
+    width: 4rem;
+    font-size: 0.75rem;
+    flex-wrap: nowrap !important;
+  }
+
+  .socialLogin {
+    flex-wrap: nowrap;
+  }
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .createAnAccount {
+    font-size: 1.2rem;
+  }
+
+  .userFormCard {
+    margin: 1rem 0rem;
+    max-width: 100%;
+  }
+
+  .signUpForUserStudent {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .getStartedButton {
+    font-size: 0.75rem;
+    padding: 4px;
+  }
+
+  .lookingForAn {
+    font-size: 0.6rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .findTheBest {
+    font-size: 0.6rem;
+    text-align: left;
+  }
+
+  .cardFooter {
+
+    clip-path: polygon(0% 0%,
+        calc(100% - 15vw) 0%, calc(100% - 15vw) 15vw,
+        100% 15vw, 100% 100%,
+        0% 100%);
+  }
+.MuiInputBase-input{
+  min-height: 100px !important;
+}
+  .roundCircle {
+    width: 40px !important;
+    height: 40px !important;
+    top: 72% !important;
+    left: 80% !important;
+  }
+
+  .groupParent {
+    clip-path: none;
+  }
+
+  .getStartedBtn {
+    display: block !important;
+    font-size: 1rem !important;
+    padding: 0.5rem !important;
+    border-radius: 30px !important;
+  }
+/* 
+  .getStartedBtn button {
+    background-color: #008F65 !important;
+    border: none !important;
+    padding: 0px !important;
+  } */
+
+  .roundCircle {
+    width: 50px !important;
+    height: 50px !important;
+    top: 70% !important;
+    left: 80% !important;
+  }
+
+  .navLinks {
+    width: 6em;
+  }
+
+  .formContainer {
+    justify-content: center;
+    align-items: center;
+  }
+}
