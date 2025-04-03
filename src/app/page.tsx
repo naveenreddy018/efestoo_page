@@ -1,11 +1,13 @@
  
-import Signed from '@/components/signed'
+import HomePage from '@/components/home'
+import { Burger } from '@/components/HomeNavBar/hamburger'
+import MyNavbar from '@/components/HomeNavBar/navbar'
 
 
 import React from 'react'
 
 function Page() {
-  return <Signed />
+  return <HomePage />
 }
 
 export default Page
