@@ -1,188 +1,141 @@
-.container {
+.wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 3rem 0;
+
+  }
+  .tag{
+    display: flex;
+    justify-content:center ;
+  }
+  
+  .container {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    margin: 5rem 0rem;
-    height: 100%;
+    gap: 15px;
+    padding: 15px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-}
-
-
-.container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.container::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.container::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-
-.card {
+    scroll-behavior: smooth;
+  }
+  
+  .container::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
+  
+  .card {
     position: relative;
-    width: 750px;
-    height: 380px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    width: 500px;
+    height: 250px;
     flex-shrink: 0;
     scroll-snap-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-
-.overlay {
-    text-align: center;
-    color: white;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    padding: 12px;
+    color: white;
     position: relative;
-}
-
-
-.title {
-    font-size: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
     font-weight: bold;
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 10%;
-}
-
-.description {
-    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
     position: absolute;
-    top: 20%;
+    top: 35%;
     left: 10%;
-    margin-top: 5px;
-}
-
-
-.button {
-    margin-top: 10px;
-    padding: 15px 22px;
+    max-width: 80%;
+  }
+  
+  .button {
+    font-size: 0.85rem;
+    padding: 8px 14px;
     position: absolute;
     top: 70%;
-    right: 10%;
-    background-color: white;
+    right: 20%;
+    background-color: #ffd700;
     color: black;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 2rem;
-    transition: background 0.3s ease-in-out;
-}
-
-.button:hover {
-    background-color: #ddd;
-}
-
-
-@media (max-width: 1200px) {
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #ffcb05;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
     .card {
-        width: 600px;
-        height: 350px;
+      width: 95%;
+      height: 220px;
     }
-}
-
-@media (max-width: 992px) {
-    .container {
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow-x: hidden;
-    }
-
-    .card {
-        width: 90%;
-        height: 320px;
-    }
-
+  
     .title {
-        font-size: 1.3rem;
+      font-size: 1rem;
     }
-
+  
     .description {
-        font-size: 0.9rem;
+      font-size: 0.8rem;
     }
-
+  
     .button {
-        font-size: 0.9rem;
-        padding: 6px 12px;
+      font-size: 0.75rem;
+      padding: 6px 12px;
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 480px) {
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
+      padding: 10px;
     }
-
+  
     .card {
-        width: 100%;
-        height: 280px;
+      width: 100%;
+      height: 200px;
     }
-
+  
     .overlay {
-        padding: 15px;
+      padding: 10px;
     }
-
+  
     .title {
-        font-size: 1.2rem;
+      font-size: 0.95rem;
     }
-
+  
     .description {
-        font-size: 0.85rem;
+      font-size: 0.75rem;
     }
-
+  
     .button {
-        font-size: 0.8rem;
-        padding: 5px 10px;
+      font-size: 0.7rem;
+      padding: 5px 10px;
     }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-
-    .card {
-        width: 100%;
-        height: 250px;
-    }
-
-    .overlay {
-        padding: 10px;
-    }
-
-    .title {
-        font-size: 1rem;
-    }
-
-    .description {
-        font-size: 0.8rem;
-    }
-
-    .button {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-    }
-}
+  }
+  

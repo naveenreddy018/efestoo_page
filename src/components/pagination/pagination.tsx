@@ -11,10 +11,13 @@ export default function PaginationRounded() {
       <Pagination
         count={8}
         shape="rounded"
-        // variant="outlined" 
         sx={{
           '& .MuiPaginationItem-root': {
-            fontSize: '18px',
+            fontSize: {
+              xs: '14px',  // Mobile: smaller number
+              sm: '16px',
+              md: '18px'   // Desktop: default size
+            },
             borderColor: '#1976d2',
             color: '#1976d2',
             margin: '0 6px',

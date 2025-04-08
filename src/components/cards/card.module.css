@@ -1,71 +1,228 @@
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px;
-  text-align: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 80vh;
 }
 
 .heading {
-  font-size: 1.8rem;
-  font-weight: bold;
-  padding: 10px;
-  margin-bottom: 40px;
-  color: #333;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.subheading {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #7f8c8d;
+  padding: 0 1rem;
+}
+
+.searchFilter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.searchInput {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 650px;
+  background: #fff;
+  border: 0.94px solid rgba(0, 0, 0, 0.5);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.filterSelect {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 180px;
+  /* background-color: #f9f9f9; */
+  color: #145fff;
+  outline: none;
+
+}
+
+.noResults {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-top: 2rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 50px;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 1rem;
 }
 
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.2s ease-in-out;
-
+.cardNew {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
-.card:hover {
+.cardNew:hover {
   transform: translateY(-5px);
 }
 
-.logo {
+.bgContainer {
+  position: relative;
+  height: 120px;
+  background-color: #ccc;
+}
+
+.bgImageNew {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(232, 177, 0, 1);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.logoCircleNew {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
   width: 80px;
   height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8.5px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.logoNew {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  margin-bottom: 10px;
 }
 
-.name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #444;
+.cardContentNew {
+  padding: 0.5rem 1rem;
+  display: flex;
+  font-size: 0.5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
 }
 
-.events {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 12px;
+.eventsCount {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: #2c3e50;
 }
 
-.button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 16px;
+.viewButtonNew {
+  background: rgba(53, 92, 236, 1);
+  color: #fff;
   border: none;
-  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
   font-size: 0.9rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.button:hover {
-  background-color: #0056b3;
+.viewButtonNew:hover {
+  background-color: #34495e;
+}
+
+.viewAllBtn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.7rem 2rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.viewAllBtn:hover {
+  background-color: #2980b9;
+}
+
+/* 📱 Responsive styles */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .searchFilter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchInput,
+  .filterSelect {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .filterSelect {
+    font-size: 1rem;
+  }
+
+  .cardContentNew {
+    padding: 0.8rem;
+  }
+
+  .viewButtonNew {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoCircleNew {
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+  }
+
+  .eventsCount {
+    font-size: 0.85rem;
+  }
+
+  .viewButtonNew {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
 }

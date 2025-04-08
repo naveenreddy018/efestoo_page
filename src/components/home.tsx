@@ -7,23 +7,28 @@ import OrganizerGrid from './cards/card'
 import PaginationRounded from './pagination/pagination'
 import EventCards from './trending/trendingCards'
 import PromoBanner from './promobanner/promobanner'
-
+import UpdateEvents from "./EventsCards/EventsCards"
 import TestimonialContainer from './promobanner/testominialcard'
 import Footer from './Footer/footer'
+import BlogCarousel from './blogs/Blog'
+import WhyEfestoo from './Features/Features'
 
 function HomePage() {
   return (
     <>
-    <MyNavbar />
-    <Coursel />
-    <OrganizerGrid />
-    <PaginationRounded />
-    <EventCards />
-    <PromoBanner />
-    <TestimonialContainer />
-    <Footer />
+      <MyNavbar />
+      <Coursel />
+      <OrganizerGrid />
+      <UpdateEvents />
+      <PaginationRounded />
+      <EventCards />
+      <BlogCarousel />
+      <PromoBanner />
+      <WhyEfestoo />
+      <TestimonialContainer />
+      <Footer />
 
-    </> 
+    </>
   )
 }
 

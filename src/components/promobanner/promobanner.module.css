@@ -2,11 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background: linear-gradient(90deg, #FFF1CC 0%, #FFE497 100%);
     border-radius: 15px;
     padding: 30px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 30px auto;
     height: 350px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

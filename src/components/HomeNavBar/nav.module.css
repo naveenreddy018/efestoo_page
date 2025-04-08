@@ -1,6 +1,6 @@
 .navbarContainer {
   background-color: #ffffff;
-  padding: 16px 24px;
+  padding: 2px 24px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -15,9 +15,9 @@
 
 
 .navbarBrand {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #d32f2f;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease-in-out, transform 0.2s;
 }
@@ -28,13 +28,63 @@
 }
 
 
+.locationWrapper {
+  position: relative;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+.locationIcon{
+  font-size: 14px;
+}
+.locationWrapper:hover {
+  background-color: #f0f0f0;
+}
+
+.locationText {
+  font-weight: 500;
+}
+
+.dropdownArrow {
+  font-size: 12px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdownItem:hover {
+  background-color: #f5f5f5;
+}
+
 .searchBox {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 0.5rem 1rem;
-  border: 1px solid #d32f2f;
-  border-radius: 25px;
+  gap: 8px;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #000000;
+  border-radius: 20px;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s;
 }
 
@@ -46,7 +96,7 @@
 .searchInput {
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: 0.75rem;
   width: 100%;
   transition: transform 0.3s;
 }
@@ -61,13 +111,16 @@
   align-items: center;
   gap: 20px;
   transition: all 0.3s ease-in-out;
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 1.2rem;  /* Slightly smaller text */
+  height: 60px;       /* Fixed height for compact look */
 }
 
 .navLink {
-  color: #d32f2f;
-  font-size: 1rem;
+  color:#000000;
+  font-size: 0.9rem;
   text-decoration: none;
-  padding: 10px 16px;
+  padding: 6px 12px;
   border-radius: 6px;
   transition: background 0.3s ease-in-out, transform 0.2s;
 }
@@ -81,7 +134,7 @@
 .alertBtn {
   padding: 10px 16px;
   border-radius: 20px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
   background-color: #1565c0;
   border: none;
@@ -96,8 +149,8 @@
 
 
 .ParentProfileIcon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: #d32f2f;
   display: flex;
@@ -114,6 +167,7 @@
 .hamburger {
   display: none;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 
@@ -140,9 +194,11 @@
     padding: 16px 0;
     z-index: 10;
   }
+  
 
   .navOpen {
     display: flex;
+    height: auto;
     transition: all 5s ease-in;
   }
 
