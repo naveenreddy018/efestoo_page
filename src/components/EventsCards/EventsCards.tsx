@@ -23,7 +23,7 @@ const Events = () => {
   const [liked, setLiked] = useState(Array(allEvents.length).fill(false));
   const [visibleCount, setVisibleCount] = useState(6);
 
-  const toggleLike = (index) => {
+  const toggleLike = (index: number) => {
     setLiked((prev) =>
       prev.map((item, i) => (i === index ? !item : item))
     );
