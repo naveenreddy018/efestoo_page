@@ -75,7 +75,7 @@ const EventPage = () => {
   const [filter, setFilter] = useState('');
   const [showAll, setShowAll] = useState(false);
 
-  const normalize = (str) => str.toLowerCase().trim();
+  const normalize = (str: string) => str.toLowerCase().trim();
 
   const filteredEvents = eventsData.filter((event) => {
     const matchesSearch = normalize(event.title).includes(normalize(search));
