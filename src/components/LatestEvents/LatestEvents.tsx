@@ -14,8 +14,8 @@ const LatestCards = () => {
   const [freeOnly, setFreeOnly] = useState(false);
   const [priceRange, setPriceRange] = useState(20000);
 
-
-  const handleFilterChange = (type) => {
+  type FilterType = "All" | "Paid" | "Free";
+  const handleFilterChange = (type: FilterType) => {
     setSelectedType(type);
     setCurrentPage(1);
   };
