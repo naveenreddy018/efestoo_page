@@ -1,0 +1,242 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: #f9f9fb;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* New scroll wrapper for horizontal scroll */
+.scrollWrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Grid layout for large screens */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll !important;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.imageWrapper {
+  position: relative;
+  height: 140px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff4d4f;
+  color: white;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+}
+
+.dateTag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 196, 6, 1);
+  color: #000000;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom-left-radius: 40px;
+  z-index: 1;
+}
+
+.cardBody {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.info {
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.locationIcon {
+  color: gray;
+  margin-right: 5px;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusLabel {
+  font-size: 0.75rem;
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+
+.paid {
+  background: rgba(255, 122, 0, 1);
+}
+
+.free {
+  background: rgba(255, 122, 0, 1);
+  color: white;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.registerBtn {
+  background: rgba(87, 140, 255, 1);
+  color: white;
+  border: none;
+  padding: 0.7rem 4.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registerBtn:hover {
+  background-color: #125ea7;
+}
+
+.favoriteBtn {
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.favoriteBtn:hover {
+  transform: scale(1.1);
+}
+
+.Dates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.liked {
+  color: #e91e63;
+}
+
+.rupeeSymbol {
+  background-color: white;
+  color: orange;
+  padding: 2px 5px;
+  border-radius: 70%;
+}
+
+.viewAllBtn {
+  margin-top: 2rem;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    overflow-y: scroll !important;
+  }
+
+  .card {
+    min-width: 270px;
+    flex-shrink: 0;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .registerBtn {
+    font-size: 0.75rem;
+  }
+
+  .favoriteBtn {
+    font-size: 1rem;
+  }
+}

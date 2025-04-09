@@ -1,0 +1,300 @@
+.eventPageContainer {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  flex-wrap: wrap;
+
+}
+
+.nav1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0rem 1rem;
+}
+
+.navItem1 {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.verticalDivider {
+  height: 20px;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.searchFilterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 250px;
+}
+
+.inlineFilterSelect {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  min-width: 180px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 2rem 2rem;
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+.separator {
+  border: none;
+  height: 1.5px;
+  width: 150px;
+  background-color: #1976d2;
+  margin: 1rem 0;
+  border-radius: 5px;
+  opacity: 0.6;
+}
+
+.sidebar h4 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar li:hover {
+  background-color: #e0e0e0;
+}
+
+.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Price Range */
+.priceRange {
+  margin-top: 1rem;
+}
+
+.priceRange button {
+  padding: 0.4rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.priceRange button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.priceRange input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Default Card Grid on Desktop */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+
+}
+
+/* Event Card */
+.eventCard {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.eventCard:hover {
+  transform: scale(1.02);
+}
+
+.eventCard img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 1rem;
+  position: relative;
+}
+
+.cardBody h5 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.cardBody p {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+  color: #555;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background-color: #eee;
+  color: #555;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.sellingFast {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.dateTag {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* Buttons */
+.registerBtn {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: 100%;
+  font-weight: bold;
+}
+
+.registerBtn:hover {
+  background-color: #218838;
+}
+
+.likeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pagination button {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.activePage {
+  background-color: #007bff;
+  color: white;
+}
+
+/* ===== Mobile Only Horizontal Scroll ===== */
+@media screen and (max-width: 468px) {
+  .eventPageContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .mainContent {
+    width: 100%;
+  }
+
+  .cardGrid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .eventCard {
+    min-width: calc(100% / 1.2); /* ~4 cards in scroll */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  /* Optional: Smooth scroll bar style */
+  .cardGrid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .cardGrid::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+  }
+
+  .cardGrid::-webkit-scrollbar-track {
+    background: #f0f0f0;
+  }
+}
+
+  

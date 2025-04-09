@@ -20,7 +20,6 @@ function HomePage() {
       <Coursel />
       <OrganizerGrid />
       <UpdateEvents />
-      <PaginationRounded />
       <EventCards />
       <BlogCarousel />
       <PromoBanner />

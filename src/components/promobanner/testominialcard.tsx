@@ -43,11 +43,14 @@ const testimonials = [
 
 const TestimonialContainer: React.FC = () => {
   return (
+    <>
+    <h1 className={styles.heading}>Here’s what your friends say</h1>
     <div className={styles.container}>
       {testimonials.map((t, index) => (
         <TestimonialCard key={index} {...t} />
       ))}
     </div>
+    </>
   );
 };
 

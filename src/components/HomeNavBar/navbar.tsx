@@ -11,6 +11,11 @@ const MyNavbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [location, setLocation] = useState("Locating...");
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isOn, setIsOn] = useState(false);
+
+  const toggleHandler = () => {
+    setIsOn(!isOn);
+  };
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -99,6 +104,13 @@ const MyNavbar = () => {
           <Image width={24} height={24} alt="Notifications" src="/bell.png" />
         </Link>
         <button className={styles.alertBtn}>+ Create Alert</button>
+        <div
+  className={`${styles.toggleContainer} ${isOn ? styles.on : styles.off}`}
+  onClick={toggleHandler}
+>
+  <div className={styles.toggleCircle}></div>
+</div>
+
         <div className={styles.ParentProfileIcon}>
           <Image src="/profileicon.png" alt="Profile" width={40} height={40} />
         </div>

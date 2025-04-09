@@ -5,7 +5,8 @@
     overflow-x: auto;
     gap: 20px;
     padding: 20px;
-    margin: 5rem;
+    margin: 3rem;
+    margin-bottom: 5rem;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
 }
@@ -37,7 +38,9 @@
 .card:hover {
     transform: scale(1.05);
 }
-
+.heading{
+    text-align: center;
+}
 
 .card img {
     width: 80px;

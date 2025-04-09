@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styles from './EventCards.module.css';
 import Image from 'next/image';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import Link from 'next/link';
 
 const allEvents = new Array(15).fill({
   title: 'Sanskriti Utsav 2025',
@@ -16,12 +17,12 @@ const allEvents = new Array(15).fill({
   daysLeft: '1 day left',
 });
 
-allEvents[1].type = 'FREE';
+allEvents[1].type = 'PAID';
 allEvents[1].isSellingFast = true;
 
 const Events = () => {
   const [liked, setLiked] = useState(Array(allEvents.length).fill(false));
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [visibleCount, setVisibleCount] = useState(4);
 
   const toggleLike = (index: number) => {
     setLiked((prev) =>
@@ -46,29 +47,40 @@ const Events = () => {
                 width={400}
                 height={250}
               />
-              {event.isSellingFast && (
+              {/* {event.isSellingFast && (
                 <span className={styles.ribbon}>
                   🔥 Selling Fast | {event.sellingDate}
                 </span>
-              )}
+              )} */}
               <span className={styles.dateTag}>{event.date}</span>
             </div>
             <div className={styles.cardBody}>
-              <div className={styles.title}>{event.title}</div>
-              <div className={styles.info}>
-                <span>
-                  <FaMapMarkerAlt className={styles.locationIcon} />
-                  {event.location}
-                </span>
-                <span className={styles.statusRow}>
-                  <span className={styles.statusLabel}>{event.daysLeft}</span>
-                  <span
+              <div className={styles.title}>{event.title}
+              <span
                     className={`${styles.badge} ${
                       event.type === 'PAID' ? styles.paid : styles.free
                     }`}
                   >
-                    {event.type}
+                   <span className={styles.rupeeSymbol}>₹</span> {event.type}
                   </span>
+              </div>
+              <div className={styles.info}>
+               <div className={styles.Dates}>
+               <div>
+               <span>
+                  <FaMapMarkerAlt className={styles.locationIcon} />
+                  {event.location}
+                </span>
+               </div>
+
+              <div>
+              <span>Starts at</span>
+              </div>
+               </div>
+                <span className={styles.statusRow}>
+                  <span className={styles.statusLabel}>🕒 {event.daysLeft}</span>
+                  <span>6:30pm</span>
+              
                 </span>
                 {/* <span>🕒 Starts at {event.time}</span> */}
               </div>
@@ -80,16 +92,14 @@ const Events = () => {
                   }`}
                   onClick={() => toggleLike(index)}
                 >
-                  {liked[index] ? '💖' : '🤍'}
+                  {liked[index] ? '💖' : '💙'}
                 </button>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <button className={styles.viewAllBtn} onClick={handleToggleView}>
-        {visibleCount === 6 ? 'View All' : 'View Less'}
-      </button>
+       <Link className={styles.viewAllBtn} href="/Events"> view more</Link>
     </div>
   );
 };

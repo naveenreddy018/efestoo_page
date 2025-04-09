@@ -1,10 +1,12 @@
+
+"use client"
 import React, { useState, useEffect } from 'react';
 import styles from './coursel.module.css'; // Importing CSS module
 
 const Coursel: React.FC = () => {
     const images: string[] = [
         'https://media.hitex.co.in/gallery/2023/lucky-ali-concert-2023/whatsapp-image-12023-03-17-at-182934_0317133464146c7ad49ba.jpg',
-        '/culture.jpg',
+        'https://img.freepik.com/premium-photo/concert-background-hd-8k-wallpaper-stock-photographic-image_1066384-65.jpg',
         'https://img.redbull.com/images/q_auto,f_auto/redbullcom/2020/9/22/jga0kgfesqc6pqcaqpu4/beats-per-minute-hyderabad-electronic-music-scene'
     ];
 

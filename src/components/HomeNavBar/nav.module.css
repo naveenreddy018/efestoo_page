@@ -12,6 +12,39 @@
   top: 0px;
   z-index: 1000;
 }
+.toggleContainer {
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: black;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.on {
+  background-color: #345afc;
+}
+
+.toggleCircle {
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s;
+}
+
+.on .toggleCircle {
+  left: 32px;
+}
+
+.off .toggleCircle {
+  left: 2px;
+}
 
 
 .navbarBrand {

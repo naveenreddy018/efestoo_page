@@ -7,20 +7,27 @@ import styles from './pagination.module.css';
 
 export default function PaginationRounded() {
   return (
-    <Stack className={styles.paginationContainer} spacing={2}>
+    <Stack className={styles.paginationContainer}>
       <Pagination
         count={8}
         shape="rounded"
+        siblingCount={6}
+        className={styles.pagination}
         sx={{
           '& .MuiPaginationItem-root': {
             fontSize: {
-              xs: '14px',  // Mobile: smaller number
-              sm: '16px',
-              md: '18px'   // Desktop: default size
+              xs: '12px',
+              sm: '14px',
+              md: '16px',
             },
-            borderColor: '#1976d2',
+            minWidth: {
+              xs: '26px',
+              sm: '30px',
+            },
+            padding: '2px 4px',
+            margin: '0 3px',
             color: '#1976d2',
-            margin: '0 6px',
+            borderColor: '#1976d2',
           },
           '& .MuiPaginationItem-root:hover': {
             backgroundColor: 'rgba(25, 118, 210, 0.1)',
@@ -37,14 +44,11 @@ export default function PaginationRounded() {
             color: '#1976d2',
           },
           '& .MuiPaginationItem-icon': {
-            fontSize: '24px',
+            fontSize: '20px',
             color: '#1976d2',
           },
-          '& .MuiPaginationItem-previousNext': {
-            margin: '0 12px',
-          },
         }}
-        className={styles.pagination}
+        
       />
     </Stack>
   );
