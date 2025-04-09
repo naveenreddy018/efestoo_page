@@ -2,7 +2,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import styles from './coursel.module.css';
-import Image from "next/image";
+
 
 const Coursel: React.FC = () => {
     const images: string[] = [
