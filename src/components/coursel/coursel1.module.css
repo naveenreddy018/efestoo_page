@@ -28,7 +28,7 @@
     /* allows wrapping on smaller screens */
 }
 
-button:nth-child(1) {
+.button:nth-child(1) {
     background: rgba(255, 215, 0, 1);
 
 

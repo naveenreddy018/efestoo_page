@@ -40,7 +40,7 @@ const Coursel1: React.FC = () => {
                     <h3>Discover & Book the Best Events Near You!</h3>
                     <p>Find exciting college fests, concerts, workshops, and competitions in one place</p>
                     <div className={styles.Register}>
-                        <button>Register</button>
+                        <button className={styles.button}>Register</button>
                         <button>Create Event</button>
                     </div>
                 </div>
