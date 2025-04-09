@@ -251,7 +251,7 @@
   color: white;
 }
 
-/* ===== Mobile Only Horizontal Scroll ===== */
+
 @media screen and (max-width: 468px) {
   .eventPageContainer {
     flex-direction: column;
@@ -277,12 +277,11 @@
   }
 
   .eventCard {
-    min-width: calc(100% / 1.2); /* ~4 cards in scroll */
+    min-width: calc(100% / 1.2);
     flex: 0 0 auto;
     scroll-snap-align: start;
   }
 
-  /* Optional: Smooth scroll bar style */
   .cardGrid::-webkit-scrollbar {
     height: 6px;
   }
@@ -296,5 +295,3 @@
     background: #f0f0f0;
   }
 }
-
-  

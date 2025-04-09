@@ -1,7 +1,8 @@
 
 "use client"
 import React, { useState, useEffect } from 'react';
-import styles from './coursel.module.css'; // Importing CSS module
+import styles from './coursel.module.css';
+import Image from "next/image";
 
 const Coursel: React.FC = () => {
     const images: string[] = [
@@ -22,7 +23,7 @@ const Coursel: React.FC = () => {
 
     return (
         <div className={styles.carouselContainer}>
-            {/* Image slides */}
+
             {images.map((image, index) => (
                 <img
                     key={index}
@@ -32,8 +33,7 @@ const Coursel: React.FC = () => {
                 />
             ))}
 
-            {/* Overlay text */}
-            <div className={styles.overlayText}>
+              <div className={styles.overlayText}>
                 <h3>DISCOVER</h3>
                 <h1>Top Colleges & Trusted Organizers</h1>
                 <p>Find exciting college fests, concerts, workshops, and competitions in one place.</p>

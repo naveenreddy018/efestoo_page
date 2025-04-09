@@ -12,15 +12,15 @@ interface TestimonialProps {
 const TestimonialCard: React.FC<TestimonialProps> = ({ image, name, review, rating }) => {
   return (
     <>
-    <div className={styles.card}>
-      <Image width={80} height={80} src={image} alt={name} className={styles.avatar} />
-      <h3 className={styles.name}>{name}</h3>
-      <div className={styles.stars}>
-        {"★".repeat(rating)}
-        {"☆".repeat(5 - rating)}
+      <div className={styles.card}>
+        <Image width={80} height={80} src={image} alt={name} className={styles.avatar} />
+        <h3 className={styles.name}>{name}</h3>
+        <div className={styles.stars}>
+          {"★".repeat(rating)}
+          {"☆".repeat(5 - rating)}
+        </div>
+        <p className={styles.review}>{review}</p>
       </div>
-      <p className={styles.review}>{review}</p>
-    </div>
     </>
   );
 };

@@ -5,200 +5,36 @@ import MoreEvents from "../EventsCards/MoreCrads";
 import PaginationRounded from "../pagination/pagination";
 import Link from "next/link";
 
-const eventData = [
-  // Add more dummy data here up to 30 items
-  {
-    id: 1,
-    title: "Sanskriti Utsav 2025",
-    date: "23rd April",
-    time: "6:30 PM",
-    location: "DY Patil Stadium",
-    duration: "1 day left",
-    sellingFast: true,
-    image: "/images/event.jpg",
-    price: "Free",
-    type: "Cultural",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  {
-    id: 2,
-    title: "AI Hackathon",
-    date: "26th April",
-    time: "10:00 AM",
-    location: "IIT Delhi",
-    duration: "2 days left",
-    sellingFast: false,
-    image: "/images/event.jpg",
-    price: "200",
-    type: "Hackathons",
-  },
-  // Add more items...
-];
-
 
 
 const LatestCards = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [, setCurrentPage] = useState(1);
   const [selectedType, setSelectedType] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [freeOnly, setFreeOnly] = useState(false);
   const [priceRange, setPriceRange] = useState(20000);
 
- 
+
   const handleFilterChange = (type) => {
     setSelectedType(type);
-    setCurrentPage(1); // reset pagination
+    setCurrentPage(1);
   };
 
-  if(currentPage){
-    return
-  }
 
 
 
   return (
     <>
-     <div>
-     <div className={styles.nav1}>
-        <Link className={styles.navItem1} href="/">Home</Link>
-        <div className={styles.verticalDivider} />
-        <span className={styles.navItem1}>All Products</span>
+      <div>
+        <div className={styles.nav1}>
+          <Link className={styles.navItem1} href="/">Home</Link>
+          <div className={styles.verticalDivider} />
+          <span className={styles.navItem1}>All Products</span>
+        </div>
       </div>
-     </div>
 
       <div className={styles.eventPageContainer}>
-        {/* Sidebar */}
+
         <div className={styles.sidebar}>
           <h4>Event type</h4>
           <hr className={styles.separator} />
@@ -231,7 +67,7 @@ const LatestCards = () => {
           </div>
         </div>
 
-        {/* Main Content */}
+
         <div className={styles.mainContent}>
 
 

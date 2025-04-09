@@ -11,7 +11,7 @@ const MyNavbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [location, setLocation] = useState("Locating...");
   const [showDropdown, setShowDropdown] = useState(false);
-  const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(true);
 
   const toggleHandler = () => {
     setIsOn(!isOn);
@@ -91,9 +91,8 @@ const MyNavbar = () => {
       </div>
 
       <div
-        className={`${styles.navLinksContainer} ${
-          isOpen ? styles.navOpen : ""
-        }`}
+        className={`${styles.navLinksContainer} ${isOpen ? styles.navOpen : ""
+          }`}
       >
         <Link href="" className={styles.navLink}>My Tickets</Link>
         <Link href="" className={styles.navLink}>Sponsorship</Link>
@@ -105,11 +104,11 @@ const MyNavbar = () => {
         </Link>
         <button className={styles.alertBtn}>+ Create Alert</button>
         <div
-  className={`${styles.toggleContainer} ${isOn ? styles.on : styles.off}`}
-  onClick={toggleHandler}
->
-  <div className={styles.toggleCircle}></div>
-</div>
+          className={`${styles.toggleContainer} ${isOn ? styles.on : styles.off}`}
+          onClick={toggleHandler}
+        >
+          <div className={styles.toggleCircle}></div>
+        </div>
 
         <div className={styles.ParentProfileIcon}>
           <Image src="/profileicon.png" alt="Profile" width={40} height={40} />

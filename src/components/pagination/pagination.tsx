@@ -48,7 +48,7 @@ export default function PaginationRounded() {
             color: '#1976d2',
           },
         }}
-        
+
       />
     </Stack>
   );

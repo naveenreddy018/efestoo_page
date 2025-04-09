@@ -22,6 +22,7 @@ allEvents[1].isSellingFast = true;
 
 const Events = () => {
   const [liked, setLiked] = useState(Array(allEvents.length).fill(false));
+  const [visibleCount] = useState(8);
 
   const toggleLike = (index: number) => {
     setLiked((prev) =>
@@ -44,11 +45,7 @@ const Events = () => {
                 width={400}
                 height={250}
               />
-              {/* {event.isSellingFast && (
-                <span className={styles.ribbon}>
-                  🔥 Selling Fast | {event.sellingDate}
-                </span>
-              )} */}
+     
               <span className={styles.dateTag}>{event.date}</span>
             </div>
             <div className={styles.cardBody}>
@@ -79,7 +76,7 @@ const Events = () => {
                   <span>6:30pm</span>
               
                 </span>
-                {/* <span>🕒 Starts at {event.time}</span> */}
+     
               </div>
               <div className={styles.buttonRow}>
                 <button className={styles.registerBtn}>Register</button>

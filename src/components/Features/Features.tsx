@@ -27,12 +27,7 @@ const features = [
     desc: 'Code, compete, and compete with the best',
     icon: '/secure.png',
   },
-//   {
-//     title: 'Easy event listing',
-//     desc: 'Code, compete, and compete with the best',
-//     icon: '/Frame.png',
-//     yellow: true,
-//   },
+
 ];
 
 const WhyEfestoo = () => {
@@ -53,7 +48,7 @@ const WhyEfestoo = () => {
         </div>
         <div>
           <Image src="/Group4.png" alt="Skills" width={120} height={120} />
-        
+
         </div>
       </div>
 

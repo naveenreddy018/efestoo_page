@@ -54,7 +54,7 @@ const BlogCarousel: React.FC = () => {
   }, []);
 
   const scroll = (direction: 'left' | 'right') => {
-    const cardWidth = 310; // Width + gap
+    const cardWidth = 310;
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: direction === 'left' ? -cardWidth : cardWidth,

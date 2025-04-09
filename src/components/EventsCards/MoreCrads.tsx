@@ -55,9 +55,8 @@ const MoreEvents = () => {
                 <div className={styles.title}>
                   {event.title}
                   <span
-                    className={`${styles.badge} ${
-                      event.type === 'PAID' ? styles.paid : styles.free
-                    }`}
+                    className={`${styles.badge} ${event.type === 'PAID' ? styles.paid : styles.free
+                      }`}
                   >
                     <span className={styles.rupeeSymbol}>₹</span> {event.type}
                   </span>
@@ -82,9 +81,8 @@ const MoreEvents = () => {
                 <div className={styles.buttonRow}>
                   <button className={styles.registerBtn}>Register</button>
                   <button
-                    className={`${styles.favoriteBtn} ${
-                      liked[globalIndex] ? styles.liked : ''
-                    }`}
+                    className={`${styles.favoriteBtn} ${liked[globalIndex] ? styles.liked : ''
+                      }`}
                     onClick={() => toggleLike(globalIndex)}
                   >
                     {liked[globalIndex] ? '💖' : '💙'}

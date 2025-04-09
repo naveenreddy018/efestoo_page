@@ -17,7 +17,6 @@ function LatestEvent() {
   return (
     <div>
       <MyNavbar />
-      <MyNavbar />
       <Coursel />
       <LatestCards />
       <EventCards />

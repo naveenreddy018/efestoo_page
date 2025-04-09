@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import styles from './subCards.module.css';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import Image from "next/image";
 
 const eventsData = [
     { id: 1, title: 'IIT HYDERABAD', eventsCount: 7, bgImage: '/cardback.png', logo: '/iit.png' },
@@ -157,7 +156,7 @@ const EventPage = () => {
                         {eventsToShow.map((event) => (
                             <div key={`${event.id}-${event.title}`} className={styles.cardNew}>
                                 <div className={styles.bgContainer}>
-                                    <Image src={event.bgImage} alt="Background" className={styles.bgImageNew} />
+                                    <img src={event.bgImage} alt="Background" className={styles.bgImageNew} />
                                     <div className={styles.banner}>
                                         <span className={styles.title}>{event.title}</span>
                                     </div>

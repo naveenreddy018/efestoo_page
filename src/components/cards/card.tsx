@@ -1,9 +1,9 @@
-
 'use client';
 
 import React, { useState } from 'react';
 import styles from './card.module.css';
 import Link from 'next/link';
+import Image from 'next/image'; // ✅ Import Next.js Image
 
 const eventsData = [
   { id: 1, title: 'IIT HYDERABAD', eventsCount: 7, bgImage: '/cardback.png', logo: '/iit.png' },
@@ -24,7 +24,7 @@ const eventsData = [
 const EventPage = () => {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('');
-  // const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
   const normalize = (str: string) => str.toLowerCase().trim();
 
@@ -34,7 +34,7 @@ const EventPage = () => {
     return matchesSearch && matchesFilter;
   });
 
-  
+  const eventsToShow = showAll ? filteredEvents : filteredEvents.slice(0, 8);
 
   return (
     <div className={styles.container}>
@@ -68,27 +68,46 @@ const EventPage = () => {
             {eventsToShow.map((event) => (
               <div key={event.id} className={styles.cardNew}>
                 <div className={styles.bgContainer}>
-                  <img src={event.bgImage} alt="Background" className={styles.bgImageNew} />
+                  <Image
+                    src={event.bgImage}
+                    alt="Background"
+                    className={styles.bgImageNew}
+                    layout="fill"
+                    objectFit="cover"
+                  />
                   <div className={styles.banner}>
                     <span className={styles.title}>{event.title}</span>
                   </div>
                   <div className={styles.logoCircleNew}>
-                    <img src={event.logo} alt="Logo" className={styles.logoNew} />
+                    <Image
+                      src={event.logo}
+                      alt="Logo"
+                      className={styles.logoNew}
+                      width={50}
+                      height={50}
+                    />
                   </div>
                 </div>
                 <div className={styles.cardContentNew}>
-                  <p className={styles.eventsCount}><strong>{event.eventsCount}</strong> upcoming events</p>
+                  <p className={styles.eventsCount}>
+                    <strong>{event.eventsCount}</strong> upcoming events
+                  </p>
                   <button className={styles.viewButtonNew}>View Events</button>
                 </div>
               </div>
             ))}
           </div>
 
-          {filteredEvents.length > 4 && (
-           
-      
-              <Link className={styles.viewAllBtn} href="/Cards">view more</Link>
-         
+          {!showAll && (
+            <button onClick={() => setShowAll(true)}>
+
+            </button>
+          )}
+
+          {filteredEvents.length > 8 && (
+            <Link className={styles.viewAllBtn} href="/Cards">
+              View more
+            </Link>
           )}
         </>
       )}

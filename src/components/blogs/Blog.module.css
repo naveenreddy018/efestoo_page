@@ -25,13 +25,13 @@
   gap: 1rem;
   padding: 1rem 0;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
   width: 100%;
   max-width: 100%;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 .card {
@@ -53,7 +53,7 @@
   display: block;
 }
 
-/* Navigation Buttons */
+
 .navButton {
   background: #ffffff;
   border: 1px solid #ddd;
@@ -69,12 +69,13 @@
 .navButton:hover {
   background: #f0f0f0;
 }
+
 .carouselWrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap; /* ✅ Prevent wrapping */
+  flex-wrap: nowrap;
 }
 
 
@@ -83,7 +84,7 @@
   cursor: not-allowed;
 }
 
-/* ✅ Responsive Design Enhancements */
+/*  Responsive Design Enhancements */
 
 /* Medium devices (tablets) */
 @media (max-width: 768px) {
@@ -97,29 +98,30 @@
   }
 }
 
-/* Small devices (phones) */
 @media (max-width: 480px) {
-  .container{
-    padding:0rem;
+  .container {
+    padding: 0rem;
   }
+
   .carouselWrapper {
     flex-direction: column;
   }
 
   .navButton {
-    margin: 0 0.3rem; /* Reduce margin for smaller screens */
+    margin: 0 0.3rem;
   }
 
   .card {
     width: 90vw;
-    height: calc(90vw * 0.5625); /* 16:9 aspect ratio */
+    height: calc(90vw * 0.5625);
   }
+
   .carouselWrapper {
-    flex-direction: row; /* ✅ Keep it row even on small screens */
+    flex-direction: row;
     justify-content: space-between;
   }
 
-  
+
 }
 
 /* Extra small devices (very narrow screens) */
