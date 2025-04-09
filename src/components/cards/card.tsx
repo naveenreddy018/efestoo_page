@@ -24,7 +24,7 @@ const eventsData = [
 const EventPage = () => {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('');
-  const [showAll, setShowAll] = useState(false);
+  // const [showAll, setShowAll] = useState(false);
 
   const normalize = (str: string) => str.toLowerCase().trim();
 
@@ -34,7 +34,7 @@ const EventPage = () => {
     return matchesSearch && matchesFilter;
   });
 
-  const eventsToShow = showAll ? filteredEvents : filteredEvents.slice(0, 4);
+  
 
   return (
     <div className={styles.container}>

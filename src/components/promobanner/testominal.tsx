@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./testomonial.module.css";
+import Image from "next/image";
 
 interface TestimonialProps {
   image: string;
@@ -12,7 +13,7 @@ const TestimonialCard: React.FC<TestimonialProps> = ({ image, name, review, rati
   return (
     <>
     <div className={styles.card}>
-      <img src={image} alt={name} className={styles.avatar} />
+      <Image width={80} height={80} src={image} alt={name} className={styles.avatar} />
       <h3 className={styles.name}>{name}</h3>
       <div className={styles.stars}>
         {"★".repeat(rating)}

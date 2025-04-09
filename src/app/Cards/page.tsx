@@ -9,14 +9,13 @@ import PromoBanner from '@/components/promobanner/promobanner'
 
 import TestimonialContainer from '@/components/promobanner/testominialcard'
 import Footer from '@/components/Footer/footer'
-import BlogCarousel from '@/components/blogs/Blog'
-import WhyEfestoo from '@/components/Features/Features'
+
+
 import EventPage from '@/components/SubCards/subCards'
 
 function CardsPage() {
   return (
     <div>
-      <MyNavbar />
       <MyNavbar />
       <Coursel />
       <EventPage />

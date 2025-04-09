@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./LatestEvents.module.css";
 import classNames from "classnames";
-import Events from "../EventsCards/EventsCards";
 import MoreEvents from "../EventsCards/MoreCrads";
 import PaginationRounded from "../pagination/pagination";
 import Link from "next/link";
@@ -173,20 +172,10 @@ const LatestCards = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedType, setSelectedType] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
-  const [likedEvents, setLikedEvents] = useState([]);
   const [freeOnly, setFreeOnly] = useState(false);
   const [priceRange, setPriceRange] = useState(20000);
 
-  const handleLike = (id) => {
-    setLikedEvents((prev) =>
-      prev.includes(id) ? prev.filter((e) => e !== id) : [...prev, id]
-    );
-  };
-
-  const handlePageChange = (page) => {
-    if (page >= 1 && page <= totalPages) setCurrentPage(page);
-  };
-
+ 
   const handleFilterChange = (type) => {
     setSelectedType(type);
     setCurrentPage(1); // reset pagination
@@ -199,8 +188,6 @@ const LatestCards = () => {
     return matchesType && matchesSearch && matchesPrice;
   });
 
-  const totalPages = Math.ceil(filteredEvents.length / ITEMS_PER_PAGE);
-  const currentItems = filteredEvents.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
 
   return (
     <>

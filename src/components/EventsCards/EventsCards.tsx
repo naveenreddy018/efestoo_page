@@ -30,9 +30,7 @@ const Events = () => {
     );
   };
 
-  const handleToggleView = () => {
-    setVisibleCount(visibleCount === 6 ? allEvents.length : 6);
-  };
+
 
   return (
     <div className={styles.container}>

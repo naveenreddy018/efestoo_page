@@ -28,17 +28,11 @@ const MoreEvents = () => {
     setLiked((prev) => prev.map((item, i) => (i === index ? !item : item)));
   };
 
-  const totalPages = Math.ceil(allEvents.length / cardsPerPage);
+  // const totalPages = Math.ceil(allEvents.length / cardsPerPage);
   const startIdx = (currentPage - 1) * cardsPerPage;
   const currentEvents = allEvents.slice(startIdx, startIdx + cardsPerPage);
 
-  const handlePrev = () => {
-    setCurrentPage((prev) => Math.max(prev - 1, 1));
-  };
 
-  const handleNext = () => {
-    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-  };
 
   return (
     <div className={styles.container}>
