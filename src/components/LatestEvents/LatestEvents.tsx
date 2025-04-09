@@ -5,21 +5,20 @@ import MoreEvents from "../EventsCards/MoreCrads";
 import PaginationRounded from "../pagination/pagination";
 import Link from "next/link";
 
-
+type FilterType = "All" | "Paid" | "Free";
 
 const LatestCards = () => {
   const [, setCurrentPage] = useState(1);
-  const [selectedType, setSelectedType] = useState("All");
+  const [selectedType, setSelectedType] = useState<FilterType>("All");;
   const [searchQuery, setSearchQuery] = useState("");
   const [freeOnly, setFreeOnly] = useState(false);
   const [priceRange, setPriceRange] = useState(20000);
 
-  type FilterType = "All" | "Paid" | "Free";
-  const handleFilterChange = (type: FilterType) => {
+  
+  const handleFilterChange = (type: FilterType) => { // ✅ Use correct type here
     setSelectedType(type);
     setCurrentPage(1);
   };
-
 
 
 
