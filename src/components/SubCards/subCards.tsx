@@ -157,7 +157,7 @@ const EventPage = () => {
                         {eventsToShow.map((event) => (
                             <div key={`${event.id}-${event.title}`} className={styles.cardNew}>
                                 <div className={styles.bgContainer}>
-                                    <img src={event.bgImage} alt="Background" className={styles.bgImageNew} />
+                                    <Image src={event.bgImage} alt="Background" className={styles.bgImageNew} />
                                     <div className={styles.banner}>
                                         <span className={styles.title}>{event.title}</span>
                                     </div>

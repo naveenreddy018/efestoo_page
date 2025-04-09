@@ -166,7 +166,7 @@ const eventData = [
   // Add more items...
 ];
 
-const ITEMS_PER_PAGE = 4;
+
 
 const LatestCards = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -181,12 +181,10 @@ const LatestCards = () => {
     setCurrentPage(1); // reset pagination
   };
 
-  const filteredEvents = eventData.filter((event) => {
-    const matchesType = selectedType === "All" || event.type === selectedType;
-    const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) || event.location.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesPrice = freeOnly ? event.price === "Free" : +event.price <= priceRange;
-    return matchesType && matchesSearch && matchesPrice;
-  });
+  if(currentPage){
+    return
+  }
+
 
 
   return (

@@ -21,7 +21,7 @@ allEvents[1].isSellingFast = true;
 
 const MoreEvents = () => {
   const [liked, setLiked] = useState(Array(allEvents.length).fill(false));
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage] = useState(1);
   const cardsPerPage = 6;
 
   const toggleLike = (index: number) => {

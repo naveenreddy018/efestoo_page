@@ -22,7 +22,6 @@ allEvents[1].isSellingFast = true;
 
 const Events = () => {
   const [liked, setLiked] = useState(Array(allEvents.length).fill(false));
-  const [visibleCount, setVisibleCount] = useState(4);
 
   const toggleLike = (index: number) => {
     setLiked((prev) =>
