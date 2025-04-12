@@ -23,7 +23,7 @@ const Coursel1: React.FC = () => {
 
     return (
         <>
-            <h1 className={styles.text}>Event Name</h1>
+           
             <div className={styles.carouselContainer}>
 
 
@@ -37,12 +37,8 @@ const Coursel1: React.FC = () => {
                 ))}
 
                 <div className={styles.overlayText}>
-                    <h3>Discover & Book the Best Events Near You!</h3>
-                    <p>Find exciting college fests, concerts, workshops, and competitions in one place</p>
-                    <div className={styles.Register}>
-                        <button className={styles.button}>Register</button>
-                        <button>Create Event</button>
-                    </div>
+                <h1 className={styles.headingPart}>DISCOVER &</h1>
+                <h1  className={styles.headingPart}>JOIN THE BEST</h1>
                 </div>
             </div>
         </>

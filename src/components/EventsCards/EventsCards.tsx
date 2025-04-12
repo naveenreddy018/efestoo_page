@@ -14,10 +14,10 @@ const allEvents = new Array(15).fill({
   type: 'PAID',
   isSellingFast: false,
   sellingDate: '18 March',
-  daysLeft: '1 day left',
+  daysLeft: 'Register by: 20 april',
 });
 
-allEvents[1].type = 'PAID';
+allEvents[1].type = '200';
 allEvents[1].isSellingFast = true;
 
 const Events = () => {
@@ -67,13 +67,13 @@ const Events = () => {
                 </span>
                </div>
 
-              <div>
+              {/* <div>
               <span>Starts at</span>
-              </div>
+              </div> */}
                </div>
                 <span className={styles.statusRow}>
                   <span className={styles.statusLabel}>🕒 {event.daysLeft}</span>
-                  <span>6:30pm</span>
+                  {/* <span>6:30pm</span> */}
               
                 </span>
      

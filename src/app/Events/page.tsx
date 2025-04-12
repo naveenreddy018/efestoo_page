@@ -23,7 +23,7 @@ function LatestEvent() {
       <PromoBanner />
       <TestimonialContainer />
       <Footer />
-    </div>
+    </div> 
   )
 }
 
