@@ -78,10 +78,10 @@ const App: React.FC = () => {
 
       setTimeout(() => {
         const replyTime = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-        // setMessages((prevMessages) => [
-        //   ...prevMessages,
-        //   { sender: "organizer", content: "Thanks for your message!", timestamp: replyTime },
-        // ]);
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { sender: "organizer", content: "Thanks for your message!", timestamp: replyTime },
+        ]);
       }, 1000);
 
       setNewMessage("");
