@@ -1,0 +1,184 @@
+/* App.module.css */
+.app {
+    font-family: Arial, sans-serif;
+    background-color: #ece5dd;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .phoneFrame {
+    width: 400px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .chatWrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .appTitle {
+    text-align: center;
+    margin: 10px;
+    color: #075e54;
+  }
+  
+  .chatIcon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .chatIconIcon {
+    font-size: 24px;
+  }
+  
+  .unreadCount {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+  }
+  
+  .userDashboard {
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .chatPreview {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .eventName {
+    font-weight: bold;
+  }
+  
+  .latestMessage {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .chatContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #e5ddd5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chatHeader {
+    background-color: #075e54;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .chatMessages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #dcf8c6;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .userMessage {
+    align-items: flex-end;
+  }
+  
+  .organizerMessage {
+    align-items: flex-start;
+  }
+  
+  .bubble {
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 75%;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .userMessage .bubble {
+    background-color: #dcf8c6;
+    border-bottom-right-radius: 0;
+  }
+  
+  .organizerMessage .bubble {
+    background-color: white;
+    border-bottom-left-radius: 0;
+  }
+  
+  .timestamp {
+    font-size: 10px;
+    color: #999;
+    text-align: right;
+    margin-top: 5px;
+  }
+  
+  .messageInput {
+    display: flex;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+  }
+  
+  .messageInput input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .messageInput button {
+    margin-left: 10px;
+    padding: 0 16px;
+    background-color: #075e54;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  

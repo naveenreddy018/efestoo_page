@@ -121,8 +121,7 @@ text-align: center;
     }
     .overlayText{
         top: 40% !important;
-        left: 3rem !important;
-        font-size: 0.7rem;
+        left: 15% !important;
     }
 
     .Register {
