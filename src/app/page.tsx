@@ -1,5 +1,7 @@
 "use client"
 import App from '@/components/Chatinterface/MessageBubble'
+import HomePage from '@/components/home'
+
 // import HomePage from '@/components/home'
 // import App from 'next/app'
 
@@ -8,7 +10,7 @@ import App from '@/components/Chatinterface/MessageBubble'
 import React from 'react'
 
 function Page() {
-  return <App />
+  return <HomePage />
 }
 
 export default Page

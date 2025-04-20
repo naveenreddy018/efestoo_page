@@ -5,7 +5,7 @@ import styles from './EventCards.module.css';
 import Image from 'next/image';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import Link from 'next/link';
-
+import { useRouter } from 'next/navigation'; 
 const allEvents = new Array(15).fill({
   title: 'Sanskriti Utsav 2025',
   location: 'NIT Dhanbad Hall',
@@ -23,6 +23,7 @@ allEvents[1].isSellingFast = true;
 const Events = () => {
   const [liked, setLiked] = useState(Array(allEvents.length).fill(false));
   const [visibleCount] = useState(8);
+  const router = useRouter();
 
   const toggleLike = (index: number) => {
     setLiked((prev) =>
@@ -30,6 +31,10 @@ const Events = () => {
     );
   };
 
+  const goToEvents = () => {
+    router.push('/ConcertEvents'); 
+
+  };
 
 
   return (
@@ -79,7 +84,7 @@ const Events = () => {
      
               </div>
               <div className={styles.buttonRow}>
-                <button className={styles.registerBtn}>Register</button>
+                <button onClick={goToEvents} className={styles.registerBtn}>Register</button>
                 <button
                   className={`${styles.favoriteBtn} ${
                     liked[index] ? styles.liked : ''
