@@ -341,7 +341,7 @@ const ConcertEvent = () => {
                   <span key={i}>{i < review.rating ? '⭐' : '☆'}</span>
                 ))}
               </div>
-              <p className={styles.text}>"{review.review}"</p>
+              <p className={styles.text}>{review.review}</p>
             </div>
           ))}
         </div>
