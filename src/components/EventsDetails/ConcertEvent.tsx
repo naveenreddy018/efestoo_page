@@ -70,7 +70,7 @@ const ConcertEvent = () => {
       rating: 4,
       img: '/Ellipse1.png',
       review:
-        "A dream come true! Anirudh's energy was next level! The moment he started singing ‘Vaathi Coming,’ the entire crowd went wild. Best night ever!",
+        "A dream come true! Anirudh's energy was next level! The moment he started singing  the entire crowd went wild. Best night ever!",
     },
     {
       name: 'Sartaj M',
@@ -86,7 +86,7 @@ const ConcertEvent = () => {
       rating: 4,
       img: '/Ellipse3.png',
       review:
-        'The sound, the lighting, the vibes—everything was perfect! The live performance of ‘Arabic Kuthu’ gave me chills! The stage setup was unreal!',
+        'The sound, the lighting, the vibes—everything was perfect! The live performance of "Arabic Kuthu" gave me chills! The stage setup was unreal!',
     },
     {
       name: 'Kranthi Kumar R',
@@ -94,7 +94,7 @@ const ConcertEvent = () => {
       rating: 4,
       img: '/Ellipse2.png',
       review:
-        'The sound, the lighting, the vibes—everything was perfect! The live performance of ‘Arabic Kuthu’ gave me chills! The stage setup was unreal!',
+        'The sound, the lighting, the vibes—everything was perfect! The live performance of "Arabic Kuthu" gave me chills! The stage setup was unreal!',
     },
     {
       name: 'Kranthi Kumar R',
@@ -102,7 +102,7 @@ const ConcertEvent = () => {
       rating: 4,
       img: '/Ellipse2.png',
       review:
-        'The sound, the lighting, the vibes—everything was perfect! The live performance of ‘Arabic Kuthu’ gave me chills! The stage setup was unreal!',
+        'The sound, the lighting, the vibes—everything was perfect! The live performance of "Arabic Kuthu"gave me chills! The stage setup was unreal!',
     },
     {
       name: 'Kranthi Kumar R',
@@ -110,7 +110,7 @@ const ConcertEvent = () => {
       rating: 4,
       img: '/Ellipse2.png',
       review:
-        'The sound, the lighting, the vibes—everything was perfect! The live performance of ‘Arabic Kuthu’ gave me chills! The stage setup was unreal!',
+        'The sound, the lighting, the vibes—everything was perfect! The live performance of "Arabic Kuthu" gave me chills! The stage setup was unreal!',
     },
     {
       name: 'Kranthi Kumar R',
@@ -118,7 +118,7 @@ const ConcertEvent = () => {
       rating: 4,
       img: '/Ellipse2.png',
       review:
-        'The sound, the lighting, the vibes—everything was perfect! The live performance of ‘Arabic Kuthu’ gave me chills! The stage setup was unreal!',
+        'The sound, the lighting, the vibes—everything was perfect! The live performance of "Arabic Kuthu" gave me chills! The stage setup was unreal!',
     },
     {
       name: 'Kranthi Kumar R',
@@ -126,7 +126,7 @@ const ConcertEvent = () => {
       rating: 4,
       img: '/Ellipse2.png',
       review:
-        'The sound, the lighting, the vibes—everything was perfect! The live performance of ‘Arabic Kuthu’ gave me chills! The stage setup was unreal!',
+        'The sound, the lighting, the vibes—everything was perfect! The live performance of "Arabic Kuthu"gave me chills! The stage setup was unreal!',
     },
     {
       name: 'Kranthi Kumar R',
@@ -134,7 +134,7 @@ const ConcertEvent = () => {
       rating: 4,
       img: '/Ellipse2.png',
       review:
-        'The sound, the lighting, the vibes—everything was perfect! The live performance of ‘Arabic Kuthu’ gave me chills! The stage setup was unreal!',
+        'The sound, the lighting, the vibes—everything was perfect! The live performance of "Arabic Kuthu" gave me chills! The stage setup was unreal!',
     },
 
   ];
@@ -256,15 +256,16 @@ const ConcertEvent = () => {
         <div className={styles.aboutSection}>
           <h2 className={styles.aboutTitle}>About the event</h2>
           <p className={styles.aboutText}>
-            My Music My Country proudly presents Anirudh Ravichander,
-            the musical sensation behind chart-topping hits like Vaathi
-            Coming, Arabic Kuthu, and the Leo Anthem, in a spectacular
-            live concert organized by Hyderabad Talkies. Get ready for
-            an electrifying night as Anirudh, one of India's most
-            celebrated music composers and singers, takes the stage
-            for an unforgettable performance! Known for his high-energy
-            beats and soul-stirring melodies, this concert promises an experience like never before.
-          </p>
+  My Music My Country proudly presents Anirudh Ravichander,
+  the musical sensation behind chart-topping hits like Vaathi
+  Coming, Arabic Kuthu, and the Leo Anthem, in a spectacular
+  live concert organized by Hyderabad Talkies. Get ready for
+  an electrifying night as Anirudh, one of India&apos;s most
+  celebrated music composers and singers, takes the stage
+  for an unforgettable performance! Known for his high-energy
+  beats and soul-stirring melodies, this concert promises an experience like never before.
+</p>
+
         </div>
       </div>
 
@@ -331,7 +332,8 @@ const ConcertEvent = () => {
                   <h3 className={styles.name}>{review.name}</h3>
                   <p className={styles.role}>{review.title}</p>
                 </div>
-                <img src={review.img} alt={review.name} className={styles.avatar} />
+                {/* <img src={review.img} alt={review.name} className={styles.avatar} /> */}
+                <Image src={review.img} alt={review.name}  className={styles.avatar}  width={500} height={300} />
 
               </div>
               <div className={styles.stars}>

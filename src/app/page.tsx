@@ -1,5 +1,5 @@
 "use client"
-import App from '@/components/Chatinterface/MessageBubble'
+
 import HomePage from '@/components/home'
 
 // import HomePage from '@/components/home'
