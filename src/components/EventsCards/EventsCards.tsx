@@ -72,13 +72,11 @@ const Events = () => {
                 </span>
                </div>
 
-              {/* <div>
-              <span>Starts at</span>
-              </div> */}
+         
                </div>
                 <span className={styles.statusRow}>
                   <span className={styles.statusLabel}>🕒 {event.daysLeft}</span>
-                  {/* <span>6:30pm</span> */}
+                 
               
                 </span>
      
