@@ -11,11 +11,12 @@ import Footer from './Footer/footer'
 import BlogCarousel from './blogs/Blog'
 import WhyEfestoo from './Features/Features'
 import Coursel1 from './coursel/coursel1'
+import PaymentPage  from "./paymentPage/paymentPage"
 
 function HomePage() {
   return (
     <>
-      <MyNavbar />
+      {/* <MyNavbar />
       <Coursel1 />
       <OrganizerGrid />
       <UpdateEvents />
@@ -24,7 +25,8 @@ function HomePage() {
       <PromoBanner />
       <WhyEfestoo />
       <TestimonialContainer />
-      <Footer />
+      <Footer /> */}
+      <PaymentPage />
 
     </>
   )

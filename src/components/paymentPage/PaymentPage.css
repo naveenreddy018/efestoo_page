@@ -1,0 +1,103 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+
+.banner {
+  background-color: #003366;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #00ccff;
+}
+
+.plan-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.plan-card {
+  flex: 1;
+  min-width: 170px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.plan-card.selected {
+  border: 2px solid #007bff;
+}
+
+.plan-card h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.plan-card span {
+  font-size: 14px;
+  color: #555;
+  margin-left: 4px;
+}
+
+.payment-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.instructions {
+  flex: 2;
+}
+
+.qr {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.qr img {
+  width: 100px;
+  height: 100px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.upload-box {
+  border: 2px dashed #bbb;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
