@@ -1,8 +1,9 @@
 "use client"
 
-import HomePage from '@/components/home'
-
+import PrivacyPolicy from '@/components/privacyPolicy/privacyPolicy'
 // import HomePage from '@/components/home'
+
+import  TermsPage from '@/components/termsAndConditions/terms'
 // import App from 'next/app'
 
 
@@ -10,7 +11,7 @@ import HomePage from '@/components/home'
 import React from 'react'
 
 function Page() {
-  return <HomePage />
+  return <PrivacyPolicy/>
 }
 
 export default Page
